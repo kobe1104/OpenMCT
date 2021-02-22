@@ -31,7 +31,7 @@ To improve:
 If I have more time I will work on the following to improve this application.
 1. I will work on removing the data that's older than 15 minutes.
 2. I observed a bug when I switched the data type and order multiple times, wrong type of data started showing.
-   I think this might be caused by "runProgram" starting running before "type" is updated. This can be resolved by creating
+   I think this might be caused by "runProgram" starting running before the unselected type is unsubscribed. This can be resolved by creating
    a chain of callback functions or setting up a promise if it's the case.
 3. Update the timestamp format to the same format as given on the instructions.
 4. Split up the functions into several modules so it looks cleaner. Right now all the code lives in "index.js"
