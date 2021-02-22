@@ -42,6 +42,15 @@ If I have more time I will work on the following to improve this application.
 8. Come up with a more efficient way to update the table.
 9. Add a git ignore file to ignore node_module folder.
 
+
+My take away:
+1. It was hard to manipulate the table effciently and precisely without using a frontend framework such as Vue.
+   I was trying to create a single source of truth for the data that's rendering (the "currentData" variable), but 
+   it takes a lot of work to track it. I think this is why we need a virtual DOM and a store.
+2. I was trying to come up with a better way to populate the table. I wonder if serializing it would be fatser. By serialization I mean 
+   making all the rows and cells into 1 single string (basically the html code) and directly change the innerHTML property with it.
+
+
 Thanks for reviewing the code.
 
 Henry
