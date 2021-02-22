@@ -40,6 +40,7 @@ If I have more time I will work on the following to improve this application.
 7. Figure out a better way to store the data instead of using the "currentData" variable. I would probably make something similar to
    a Vuex store.
 8. Come up with a more efficient way to update the table.
+9. Add a git ignore file to ignore node_module folder.
 
 Thanks for reviewing the code.
 
