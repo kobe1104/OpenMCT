@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      td,
+      th,
+      table {
+        border: 1px solid black;
+      }
+    </style>
+    <title>Open MCT Coding</title>
+    <script src="lib/http.js"></script>
+    <!-- <script src="historical-telemetry.js"></script> -->
+  </head>
+  <body>
+    <h1>my table</h1>
+    <label for="type">Type:</label>
+    <select name="type" id="type_selection" onchange="switchType(event)"">
+        <option value="both">both</option>
+      <option value="pwr.c">pwr.c</option>
+      <option value="pwr.v">pwr.v</option>
+    </select>
+    <label for="order">Order:</label>
+    <select name="order" id="order_selection" onchange="switchOrder(event)"">
+        <option value="latest">latest</option>
+      <option value="oldest">oldest</option>
+    </select>
+    <div class="data_table">
+      <table class="table">
+        <tr class="colnum_names">
+          <th>ID</th>
+          <th>Timestamp</th>
+          <th>Value</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
