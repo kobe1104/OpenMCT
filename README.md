@@ -1,6 +1,8 @@
 # OpenMCT
 NASA OpenMCT coding challenge
 
+UPDATE: all the improvements will be put in the branches start with "refactor".
+
 Instructions:
 1. Please clone the code by running "git clone git@github.com:kobe1104/OpenMCT.git"
 2. Navigate to the folder(OpenMCT) on terminal and run npm install
