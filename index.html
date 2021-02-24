@@ -10,18 +10,20 @@
     </style>
     <title>Open MCT Coding</title>
     <script src="lib/http.js"></script>
-    <!-- <script src="historical-telemetry.js"></script> -->
+    <script src="historical-telemetry.js"></script>
+    <script src="util.js"></script>
+    <script src="subscription.js"></script>
   </head>
   <body>
     <h1>my table</h1>
     <label for="type">Type:</label>
-    <select name="type" id="type_selection" onchange="switchType(event)"">
+    <select name="type" id="type_selection" onchange="util.switchType(event)"">
         <option value="both">both</option>
       <option value="pwr.c">pwr.c</option>
       <option value="pwr.v">pwr.v</option>
     </select>
     <label for="order">Order:</label>
-    <select name="order" id="order_selection" onchange="switchOrder(event)"">
+    <select name="order" id="order_selection" onchange="util.switchOrder(event)"">
         <option value="latest">latest</option>
       <option value="oldest">oldest</option>
     </select>
