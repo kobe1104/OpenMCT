@@ -9,8 +9,8 @@
 })(this, function (root) {
 	"use strict";
 
-	function clearTable(callback) {
-		// clear table an currentData
+	function initialize(callback) {
+		// empty table, currentData and unsubscribe both channels
 		currentData = [];
 		let table = document.querySelector(".table");
 		table.innerHTML = `
@@ -20,6 +20,7 @@
       <th>Value</th>
     </tr>
       `;
+		subscription.unsubscribe();
 		callback();
 	}
 
@@ -73,15 +74,13 @@
 			//   get both
 			types = ["pwr.c", "pwr.v"];
 		}
-		//   unsubscribe both types first
-		subscription.unsubscribe();
-		clearTable(runProgram);
+		initialize(runProgram);
 	};
 
 	exports.switchOrder = function (event) {
 		let currentSelection = event.currentTarget.value;
 		order = currentSelection;
-		clearTable(runProgram);
+		initialize(runProgram);
 	};
 
 	exports.removeOldData = function () {
